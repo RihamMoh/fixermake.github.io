@@ -1,20 +1,20 @@
-<! DOCTYPE>
+<!DOCTYPE html>
 <html>
-	<body>
-		<script src="https://accounts.google.com/gsi/client" async defer></script>
-		<div id="g_id_onload" data-client_id="82615334527-u1uu16pur22qm697t892ihf7e6ho7lsn" data-callback="handleCredentialResponse"></div>
-		<div class="g_id_signin" data-type="standard" data-onsuccess="onSignIn"></div>
-		<button onclick="signOut();">Sign out</button>
-		<script>
-			function onSignIn(googleUser) {
-				console.log(googleUser)
-			}
-			function signOut() {
-				var auth2 = gapi.auth2.getAuthInstance();
-				auth2.signOut().then(function () {
-					console.log('User signed out.');
-				});
-			}
-		</script>
-	</body>
+<body>
+	<script src="https://apis.google.com/js/platform.js" async defer></script>
+	<meta name="google-signin-client_id" content="82615334527-u1uu16pur22qm697t892ihf7e6ho7lsn.apps.googleusercontent.com">
+ 	<div class="g-signin2" data-onsuccess="handleCredentialResponse"></div>
+	<button onclick="signOut();">Sign out</button>
+	<script>
+		function onSignIn(googleUser) {
+			console.log(googleUser)
+		}
+		function signOut() {
+			var auth2 = gapi.auth2.getAuthInstance();
+			auth2.signOut().then(function () {
+				console.log('User signed out.');
+			});
+		}
+	</script>
+</body>
 </html>
