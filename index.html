@@ -1,11 +1,10 @@
 <! DOCTYPE>
 <html>
-	<head>
-		<script src="https://apis.google.com/js/platform.js" async defer></script>	
-		<meta name="google-signin-client_id" content="82615334527-u1uu16pur22qm697t892ihf7e6ho7lsn">
-	</head>
 	<body>
-		<div class="g-signin2" data-onsuccess="onSignIn"></div>
+		<script src="https://accounts.google.com/gsi/client" async defer></script>
+		<div id="g_id_onload"
+			data-client_id="82615334527-u1uu16pur22qm697t892ihf7e6ho7lsn" data-callback="handleCredentialResponse"></div>
+		<div class="g_id_signin" data-type="standard" data-onsuccess="onSignIn"></div>
 		<a href="#" onclick="signOut();">Sign out</a>
 		<script>
 			function onSignIn(googleUser) {
