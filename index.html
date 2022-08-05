@@ -3,10 +3,10 @@
 <body>
 	<script src="https://apis.google.com/js/platform.js" async defer></script>
 	<meta name="google-signin-client_id" content="82615334527-u1uu16pur22qm697t892ihf7e6ho7lsn.apps.googleusercontent.com">
- 	<div class="g-signin2" data-onsuccess="handleCredentialResponse"></div>
+ 	<div class="g-signin2" data-onsuccess="onSignIn"></div>
 	<button onclick="signOut();">Sign out</button>
 	<script>
-		function onSignIn(googleUser) {
+		window.onSignIn(googleUser) {
 			console.log(googleUser)
 		}
 		function signOut() {
