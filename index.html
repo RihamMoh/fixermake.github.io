@@ -6,7 +6,7 @@
  	<div class="g-signin2" data-onsuccess="onSignIn"></div>
 	<button onclick="signOut();">Sign out</button>
 	<script>
-		window.onSignIn = (googleUser) => {
+		function onSignIn(googleUser){
 			console.log(googleUser)
 		}
 		function signOut() {
