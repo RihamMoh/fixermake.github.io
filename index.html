@@ -7,8 +7,7 @@
 		<button onclick="signOut();">Sign out</button>
 		<script>
 			function onSignIn(googleUser) {
-				  var profile = googleUser.getBasicProfile();
-				  console.log(profile)
+				console.log(googleUser)
 			}
 			function signOut() {
 				var auth2 = gapi.auth2.getAuthInstance();
